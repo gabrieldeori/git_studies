@@ -189,3 +189,36 @@ teste.*
 src
 src/img
 ```
+
+## Vídeo-9: Criando Branches e Gitflow
+Ao iniciar o projeto uma branch principal chamada main(master nas versões antigas) é criada. Porém você pode criar suas branchs também utilizando:
+
+```sh
+git branch # Lista branchs | * ou colorido é a branch que está
+
+git branch nome_branch # Cria uma branch nova
+
+git checkout nome_branch # Faz o checkout para a branch com o valor inserido
+
+git checkout -b nome_branch # Cria uma branch e faz o checkout apenas com 1 comando.
+
+git branch -d nome_branch # Deleta a branch mas impede a deleção caso haja commits não incorporados a outra branch
+
+git branch -D nome_branch # Força deleção da branch mesmo que os commits dessa branch não tenham sido incorporados em outra branch ou não exista referências a esses commits em outra branch
+```
+
+### Gitflow
+É sempre bom desenvolver features em branchs derivadas da principal, e existem algumas metodologias para separar as diversas etapas de desenvolvimento.
+
+Uma dessas metodologias é o Gitflow, que separa em 4 branchs principais:
+
+- main: Ambiente de produção, versão estável do código
+- deploy: Temporária para implantação em ambiente de produção
+- test: Para validar alterações antes do deploy.
+- development: Para desenvolvimento de novas funcionalidades
+
+No caso um programador por exemplo, desenvolveria uma feature em uma branch derivada da branch development.
+
+Mas fique atento, nem todas as operações utilizam essa metodologia, ou talvez use com alguma variação.
+
+
