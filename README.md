@@ -402,3 +402,35 @@ Fork é uma funcionalidade do GitHub que permite:
 - Criar projetos derivados: O fork também pode ser usado para criar um projeto derivado a partir de outro existente. Isso é útil quando o usuário deseja criar uma versão personalizada de um projeto existente ou usar o código como ponto de partida para um novo projeto.
 
 - Armazenar uma cópia do repositório: O fork permite que um usuário tenha uma cópia completa de um repositório Git em seu próprio perfil do GitHub. Isso é útil para backup ou para acesso fácil a um repositório, mesmo que o repositório original seja excluído ou movido.
+
+## Conteúdos Github não abordados
+### Issues
+
+São usadas para relatar e rastrear bugs, solicitações de recursos e outras questões relacionadas a um projeto. Com as Issues, os usuários podem colaborar na resolução de problemas e discutir possíveis soluções. As issues são essenciais para um gerenciamento de projetos bem-sucedido e colaborativo.
+
+### Actions
+São usadas para criar workflows automatizados que são executados quando ocorrem eventos específicos em um repositório do GitHub. Por exemplo, quando uma nova solicitação de pull é aberta, um fluxo de trabalho pode ser acionado para testar as mudanças propostas e alertar os mantenedores do repositório sobre possíveis problemas.
+
+### Projects
+São usados para organizar e priorizar tarefas, Issues e pull requests em um repositório do GitHub. Com os Projects, os usuários podem criar quadros Kanban ou tabelas de rastreamento para ajudar a gerenciar o trabalho em andamento e visualizar o progresso do projeto.
+
+### Wikis
+Uma área wiki para documentação de um projeto, que pode ser editada por qualquer pessoa com acesso ao repositório.
+
+### Gists
+Uma maneira fácil de compartilhar pequenos trechos de código ou anotações com outras pessoas.
+
+### Insights
+Uma seção do GitHub que fornece informações sobre o uso e o desempenho de um repositório, incluindo informações sobre contribuidores, problemas, solicitações de pull e muito mais.
+
+### Pages
+Permite que um repositório do GitHub seja transformado em um site estático, tornando-o fácil de publicar e compartilhar.
+
+### Security
+Fornece informações sobre vulnerabilidades conhecidas e possíveis vulnerabilidades em um repositório do GitHub.
+
+### Dependabot
+Um serviço que verifica as dependências de um projeto e avisa quando há atualizações disponíveis, ajudando a manter o projeto atualizado e seguro.
+
+### Codespaces
+Permite criar um ambiente de desenvolvimento completo diretamente no navegador, facilitando a colaboração e a experimentação em projetos.
