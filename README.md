@@ -250,4 +250,57 @@ Tipo de merge no Git que ocorre quando não há conflitos entre duas branches qu
 
 Forma de realizar um merge no Git que é usada quando há conflitos entre as branches que estão sendo mescladas. Nesse caso, o Git cria um novo commit de merge que combina as alterações de ambas as branches e resolve quaisquer conflitos encontrados. Esse processo é chamado de "merge recursivo" porque o Git pode precisar mesclar commits de merge anteriores para resolver todos os conflitos.
 
+## Vídeo-11: Resolvendo conflitos
 
+As vezes o git não consegue resolver sozinho os conflitos do código e para isso é necessária uma intervenção manual do desenvolvedor.
+
+Existem duas versões e o desenvolvedor deverá escolher entre uma ou outra versão. O mais importante é comunicar com o time e decidir em conjunto as prioridades e como resolver os conflitos. As vezes é possível que ocorra conflito de código em linhas, mas não na lógica do código o que permite manter as duas versões.
+
+Conflito de lógica:
+```css
+22 body: {
+<<<<<< HEAD
+23  color: red;
+======
+23 color: blue;
+>>>>>> branch_remetente
+}
+```
+É necessário decidir qual a versão.
+
+Conflito de linha
+```css
+22 body: {
+<<<<<< HEAD
+23 background-color: red;
+======
+23 color: blue;
+>>>>>> branch_remetente
+}
+```
+É possível manter as duas versões.
+
+Pra resolver basta apagar os wrappers que o git criou e o código que não for utilizar e salvar, depois é só fazer um git-commit. Ex:
+
+```css
+22 body: {
+<<<<<< HEAD
+23  color: red;
+======
+23 color: blue;
+>>>>>> branch_remetente
+}
+```
+Fica:
+```css
+22 body: {
+23  color: red;
+}
+```
+Faz:
+
+```sh
+git commit # Gerará a mensagem padrão do git. Basta salvar e fechar o editor.
+```
+
+Dependendo do editor ou ide que você estiver usando é possível resolver conflitos em uma ferramenta.
