@@ -221,4 +221,33 @@ No caso um programador por exemplo, desenvolveria uma feature em uma branch deri
 
 Mas fique atento, nem todas as operações utilizam essa metodologia, ou talvez use com alguma variação.
 
+## Vídeo-10: Fundindo Branches
+```sh
+git checkout branch_destinataria # Indo para a branch_destinataria, a que receberá as alterações
+
+git merge branch_remetente # Trazendo para a branch_destinatária as modificações feitas na branch_remetente
+```
+
+No caso do exemplo entramos na branch_destinatária e puxamos as alterações que foram feitas na branch_remetente.
+
+"git incorpore na branch que estou as alterações da branch de nome nome_branch"
+
+```sh
+git log # Se fizer um git log perceberá que os commits serão preservados ao realizar o merge
+```
+
+### Apenas por curiosidade
+
+Existem outras estratégias de merge, como o squash e o rebase, mas deixaremos pra outro momento.
+
+Entre as estratégias de merge mencionadas no vídeo, destaca-se:
+
+#### Estratégia de merge "Fast-forward":
+
+Tipo de merge no Git que ocorre quando não há conflitos entre duas branches que estão sendo mescladas. Nesse caso, o Git simplesmente avança a branch atual até a ponta da branch a ser mesclada, incorporando todas as alterações dessa branch sem criar um novo commit de merge.
+
+#### Estratégia de merge "Recursiva":
+
+Forma de realizar um merge no Git que é usada quando há conflitos entre as branches que estão sendo mescladas. Nesse caso, o Git cria um novo commit de merge que combina as alterações de ambas as branches e resolve quaisquer conflitos encontrados. Esse processo é chamado de "merge recursivo" porque o Git pode precisar mesclar commits de merge anteriores para resolver todos os conflitos.
+
 
