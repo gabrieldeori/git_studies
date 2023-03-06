@@ -365,3 +365,12 @@ git push -u origin main # Cria um alias para a branch atual para enviar sempre d
 
 git push # Após o comando acima, irá fazer push de origin pra main direto
 ```
+
+## Vídeo-13: Simulando Múltiplos devs e pulls
+É um vídeo de exemplos, mas alguns comandos novos são:
+
+```sh
+git pull # Sincronizar as atualizações feitas em todas as branchs
+
+git pull branch_especifica # Sincronizar branch específica
+``` 
