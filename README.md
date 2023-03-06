@@ -140,3 +140,41 @@ git log --decorate # Exibe informações adicionais ao lado dos commits.
 
 git log --graph --decorate --oneline # Tente essa
 ```
+
+## Vídeo-7: Desfazendo commits:
+
+### 🚨 Muito cuidado! Esses comandos são muito poderosos e podem quebrar um repositório as vezes de forma não reversível. Com grandes poderes vem grandes responsabilidades.
+
+###  🟢 Checkout 🟢
+Esse é um comando mais seguro, já que ele não faz alterações no histórico de commits. Caso faça algum commit uma nova branch será criada e a original entrará em modo de "detenção"
+
+Aqui seria como viajar no tempo apenas como observador, mas se modificar algo no passado, você criará uma nova linha do tempo.
+
+#### Fluxo de uso
+```sh
+git log # Pegue o hash do commit desejado, não precisa ser ele completo, normalmente 5 ou 6 caracteres são suficientes
+
+git checkout h4shcomm1t # o HEAD será apontado para o commit do hash específico.
+```
+
+### 🟡 Revert 🟡
+Esse é um comando que deve ser usado com muita atenção, mesmo ele não alterando o histórico de commits, ele irá criar um novo commit trazendo de volta alterações do passado o que pode causar alguns conflitos.
+
+Imagine que quer reformar uma casa antiga destruída usando informação do passado, você não copia a casa e traz ela por inteiro, você copiaria uma lista de todas as diferenças que a casa atual tem da anterior os danos que a casa sofreu e com essa informação reverteria cada ítem da lista para o estado mais antigo.
+
+```sh
+git log # Pegue o hash do commit desejado
+
+git revert h4shcomm1t # Reverterá para o ponto em específico
+```
+
+### 🔴 Reset 🔴
+Esse comando deve ser usado apenas em situações que ele realmente é necessário, aqui você tem que ter certeza que não quer mais nenhum commit que foi feito naquela branch, o reset irá apagar os commits.
+
+É como se viajasse do futuro ao passado e apagasse toda a linha do tempo entre essa viagem.
+
+```sh
+git reset h4shcomm1t # Volta ao commit especificado, porém mantém alterações atuais não commitadas
+
+git reset --hard h4shcomm1t # Volta ao commit especificado descartando alterações não commitadas
+```
