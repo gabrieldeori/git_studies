@@ -376,3 +376,21 @@ git pull # Sincronizar as atualizações feitas em todas as branchs
 
 git pull branch_especifica # Sincronizar branch específica
 ``` 
+
+## Vídeo-14: Fazendo PR's
+O pull-request no GitHub é uma forma de colaboração onde um colaborador pode sugerir mudanças no código de um repositório e iniciar uma discussão com os mantenedores. Ele permite que os mantenedores revisem e discutam as mudanças propostas antes de serem mescladas na branch principal do repositório.
+
+É um processo mais visual no frontend do Github.
+
+### Fique de olho
+Sempre que for criar um pull-request, veja se a sua branch aponta para a branch que quer fazer merge, nem sempre é na main que queremos fazer merge.
+
+Para isso existe um menu-dropdown em que é possível escolher para que branch estamos direcionando nosso PR.
+
+Outro ponto é que também é possível fazer "merge", "squash" e "rebase" com o PR.
+
+### Após o merge
+Você pode usar a mesma branch de um pull request após mesclá-lo. Quando você mescla um pull request, as mudanças são aplicadas à branch de destino, mas a branch original ainda existe no repositório. Isso significa que você pode continuar a trabalhar nessa branch e fazer mais alterações se precisar.
+
+Além disso, você também pode usar o histórico de um pull request após mesclá-lo. O GitHub mantém o registro de todos os pull requests que foram mesclados em uma determinada branch, permitindo que você acompanhe as mudanças e veja quem contribuiu para o código.
+
