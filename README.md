@@ -394,3 +394,11 @@ Você pode usar a mesma branch de um pull request após mesclá-lo. Quando você
 
 Além disso, você também pode usar o histórico de um pull request após mesclá-lo. O GitHub mantém o registro de todos os pull requests que foram mesclados em uma determinada branch, permitindo que você acompanhe as mudanças e veja quem contribuiu para o código.
 
+## Vídeo-15 Fazendo Fork
+Fork é uma funcionalidade do GitHub que permite:
+
+- Contribuir com projetos: Quando um usuário deseja contribuir com um projeto existente, ele pode criar um fork para fazer mudanças sem afetar o repositório original. Depois, pode enviar um pull request com as mudanças sugeridas para os mantenedores do repositório avaliarem.
+
+- Criar projetos derivados: O fork também pode ser usado para criar um projeto derivado a partir de outro existente. Isso é útil quando o usuário deseja criar uma versão personalizada de um projeto existente ou usar o código como ponto de partida para um novo projeto.
+
+- Armazenar uma cópia do repositório: O fork permite que um usuário tenha uma cópia completa de um repositório Git em seu próprio perfil do GitHub. Isso é útil para backup ou para acesso fácil a um repositório, mesmo que o repositório original seja excluído ou movido.
