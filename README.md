@@ -5,6 +5,26 @@ Nesse texto utilizarei como base as aulas da playlist [Curso gratuito Git e Gith
 
 ###### ⚠️ Atenção, os textos abaixo são resumos de cabeça do conteúdo, não representam ou substituem ver os vídeos ou fazer as pesquisas.
 
+- [Vídeo-1: O que é GIT?](#video-1)
+- [Vídeo-2: Commits](#video-2)
+- [Vídeo-3: Instalação e configuração do GIT.](#video-2)
+- [Vídeo-4: Criando Repositórios.](#video-4)
+- [Vídeo-5: Colocando arquivos no stage](#video-5)
+- [Vídeo-6: Fazendo Commits e Logs](#video-6)
+- [Vídeo-7: Desfazendo commits:](#video-7)
+- [Vídeo-8: Ignorando arquivos](#video-8)
+- [Vídeo-9: Criando Branches e Gitflow](#video-9)
+- [Vídeo-10: Fundindo Branches](#video-10)
+- [Vídeo-11: Resolvendo conflitos](#video-11)
+- [Vídeo-12: Iniciando com Github.](#video-12)
+- [Vídeo-13: Simulando Múltiplos devs e pulls](#video-13)
+- [Vídeo-14: Fazendo PR's](#video-14)
+- [Vídeo-15: Fazendo Fork](#video-15)
+
+Extra:
+- [Conteúdos Git não abordados](#git-nao-abordado)
+- [Conteúdos Github não abordados](#github-nao-abordado)
+
 ## Vídeo-1: O que é GIT?
 
 Git é um software para rastrear alterações em qualquer conjunto de arquivos, geralmente usado para coordenar o trabalho entre programadores que desenvolvem código-fonte de forma colaborativa durante o desenvolvimento de software. Seus objetivos incluem:
@@ -36,7 +56,7 @@ O Github actions traz a possibilidade de criar um fluxo de trabalho, por exemplo
 
 Por fim o Github também traz a funcionalidade do Github Copilot que é uma inteligência artificial de assistência de código, que tem como objetivo, auxiliar desenvolvedores com códigos gerados baseados em códigos de diversos repositórios de sua base.
 
-## Vídeo-2: 
+## Vídeo-2: Commits {#video-2}
 
 ### Repositório
 Essencialmente git repository é um diretório chamado de .git dentro do seu projeto. Este repositório rastreia todas as mudanças feitas nos arquivos do seu projeto, construindo um histórico ao longo do tempo.
@@ -72,18 +92,18 @@ O programador então decide que é a hora de algumas diferenças(patches) virare
 git branch # Mostra as branchs atuais
 ```
 
-## Vídeo-3: Instalação e configuração do GIT.
+## Vídeo-3: Instalação e configuração do GIT. {#video-3}
 
 Nesse tópico irei apenas referenciar meu repositório de [configuração de ambiente de desenvolvimento](https://github.com/gabrieldeori/cfg_dev_environment/tree/main/first_config), no capítulo sobre GIT, observando apenas as diferenças na instalação do git no windows é feita através do exe.
 
-## Vídeo-4: Criando Repositórios.
+## Vídeo-4: Criando Repositórios. {#video-4}
 
 ### Comandos básicos:
 ```sh
 git init # Cria .git/inicia repositório
 ```
 
-## Vídeo-5: Colocando arquivos no stage
+## Vídeo-5: Colocando arquivos no stage {#video-5}
 
 ###### ⚠️ Atençaõ: Deve-se entender o contexto do diretório onde os comandos estão sendo executados. Por exemplo se seu repositório for em projeto1 e o seu terminal estiver em projeto1/src, os comandos serão executados dentro do contexto da pasta src, ou seja observando os arquivos e diretórios de src.
 
@@ -118,7 +138,7 @@ git restore --staged . # Retira todos os diretórios e arquivos da área de stag
 git rm --cached index.html # Retira apenas o arquivo index.html
 ```
 
-## Vídeo-6: Fazendo Commits e Logs
+## Vídeo-6: Fazendo Commits e Logs {#video-6}
 ### Comandos Commit:
 ```sh
 git commit # Abre editor padrão para editar a mensagem de commit
@@ -143,7 +163,7 @@ git log --decorate # Exibe informações adicionais ao lado dos commits.
 git log --graph --decorate --oneline # Tente essa
 ```
 
-## Vídeo-7: Desfazendo commits:
+## Vídeo-7: Desfazendo commits: {#video-7}
 
 ### 🚨 Muito cuidado! Esses comandos são muito poderosos e podem quebrar um repositório as vezes de forma não reversível. Com grandes poderes vem grandes responsabilidades.
 
@@ -181,7 +201,7 @@ git reset h4shcomm1t # Volta ao commit especificado, porém mantém alterações
 git reset --hard h4shcomm1t # Volta ao commit especificado descartando alterações não commitadas
 ```
 
-## Vídeo-8: Ignorando arquivos
+## Vídeo-8: Ignorando arquivos {#video-8}
 Para que o git ignore arquivos você pode simplesmente criar um arquivo de nome .gitignore e populá-lo com o que quiser:
 
 ```txt
@@ -192,7 +212,7 @@ src
 src/img
 ```
 
-## Vídeo-9: Criando Branches e Gitflow
+## Vídeo-9: Criando Branches e Gitflow {#video-9}
 Ao iniciar o projeto uma branch principal chamada main(master nas versões antigas) é criada. Porém você pode criar suas branchs também utilizando:
 
 ```sh
@@ -223,7 +243,7 @@ No caso um programador por exemplo, desenvolveria uma feature em uma branch deri
 
 Mas fique atento, nem todas as operações utilizam essa metodologia, ou talvez use com alguma variação.
 
-## Vídeo-10: Fundindo Branches
+## Vídeo-10: Fundindo Branches {#video-10}
 ```sh
 git checkout branch_destinataria # Indo para a branch_destinataria, a que receberá as alterações
 
@@ -252,7 +272,7 @@ Tipo de merge no Git que ocorre quando não há conflitos entre duas branches qu
 
 Forma de realizar um merge no Git que é usada quando há conflitos entre as branches que estão sendo mescladas. Nesse caso, o Git cria um novo commit de merge que combina as alterações de ambas as branches e resolve quaisquer conflitos encontrados. Esse processo é chamado de "merge recursivo" porque o Git pode precisar mesclar commits de merge anteriores para resolver todos os conflitos.
 
-## Vídeo-11: Resolvendo conflitos
+## Vídeo-11: Resolvendo conflitos {#video-11}
 
 As vezes o git não consegue resolver sozinho os conflitos do código e para isso é necessária uma intervenção manual do desenvolvedor.
 
@@ -307,7 +327,7 @@ git commit # Gerará a mensagem padrão do git. Basta salvar e fechar o editor.
 
 Dependendo do editor ou ide que você estiver usando é possível resolver conflitos em uma ferramenta.
 
-## Vídeo-12: Iniciando com Github.
+## Vídeo-12: Iniciando com Github. {#video-12}
 
 Manter um repositório remoto é muito vantajoso, salva o progresso de desenvolvimento em um local mais seguro, já que sua máquina pode dar problema, facilita a visualização de outras pessoas do time, entre outras vantagens já discutidas.
 
@@ -368,7 +388,7 @@ git push -u origin main # Cria um alias para a branch atual para enviar sempre d
 git push # Após o comando acima, irá fazer push de origin pra main direto
 ```
 
-## Vídeo-13: Simulando Múltiplos devs e pulls
+## Vídeo-13: Simulando Múltiplos devs e pulls {#video-13}
 É um vídeo de exemplos, mas alguns comandos novos são:
 
 ```sh
@@ -377,7 +397,7 @@ git pull # Sincronizar as atualizações feitas em todas as branchs
 git pull branch_especifica # Sincronizar branch específica
 ``` 
 
-## Vídeo-14: Fazendo PR's
+## Vídeo-14: Fazendo PR's {#video-14}
 O pull-request no GitHub é uma forma de colaboração onde um colaborador pode sugerir mudanças no código de um repositório e iniciar uma discussão com os mantenedores. Ele permite que os mantenedores revisem e discutam as mudanças propostas antes de serem mescladas na branch principal do repositório.
 
 É um processo mais visual no frontend do Github.
@@ -394,7 +414,7 @@ Você pode usar a mesma branch de um pull request após mesclá-lo. Quando você
 
 Além disso, você também pode usar o histórico de um pull request após mesclá-lo. O GitHub mantém o registro de todos os pull requests que foram mesclados em uma determinada branch, permitindo que você acompanhe as mudanças e veja quem contribuiu para o código.
 
-## Vídeo-15 Fazendo Fork
+## Vídeo-15 Fazendo Fork {#video-15}
 Fork é uma funcionalidade do GitHub que permite:
 
 - Contribuir com projetos: Quando um usuário deseja contribuir com um projeto existente, ele pode criar um fork para fazer mudanças sem afetar o repositório original. Depois, pode enviar um pull request com as mudanças sugeridas para os mantenedores do repositório avaliarem.
@@ -403,7 +423,7 @@ Fork é uma funcionalidade do GitHub que permite:
 
 - Armazenar uma cópia do repositório: O fork permite que um usuário tenha uma cópia completa de um repositório Git em seu próprio perfil do GitHub. Isso é útil para backup ou para acesso fácil a um repositório, mesmo que o repositório original seja excluído ou movido.
 
-## Conteúdos Git não abordados
+## Conteúdos Git não abordados {#git-nao-abordado}
 ### git stash
 Permite salvar temporariamente as alterações em uma branch sem ter que fazer commit, o que pode ser útil quando você precisa mudar de branch rapidamente.
 
@@ -428,7 +448,7 @@ Permite reorganizar a história de commits em uma branch, o que pode ser útil p
 ### git squash
 Permite combinar vários commits em um único commit para tornar a história do git mais clara e organizada. Isso pode ser útil, por exemplo, para limpar uma branch antes de criar uma solicitação de pull, combinando vários commits em um único commit mais descritivo e fácil de entender. O comando git squash é usado em conjunto com o comando git rebase -i (interativo), que permite editar e reorganizar os commits em uma branch. Ao usar o git rebase -i, você pode marcar um ou mais commits para squash, o que criará um novo commit que combina as alterações desses commits em um único commit.
 
-## Conteúdos Github não abordados
+## Conteúdos Github não abordados {#github-nao-abordado}
 ### Issues
 
 São usadas para relatar e rastrear bugs, solicitações de recursos e outras questões relacionadas a um projeto. Com as Issues, os usuários podem colaborar na resolução de problemas e discutir possíveis soluções. As issues são essenciais para um gerenciamento de projetos bem-sucedido e colaborativo.
