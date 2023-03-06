@@ -116,3 +116,26 @@ git restore --staged . # Retira todos os diretórios e arquivos da área de stag
 
 git rm --cached index.html # Retira apenas o arquivo index.html
 ```
+
+## Vídeo-6: Fazendo Commits e Logs
+### Comandos Commit:
+```sh
+git commit # Abre editor padrão para editar a mensagem de commit
+
+git commit -m "mensagem" # Commita direto com a mensagem que está entre aspas.
+```
+
+###### ⚠️Importante lembrar que o histórico mostrado usa o contexto da branch em que está.
+
+###
+```sh
+git log # Mostra o log de históricos de commits do repositório
+
+git log --oneline # Forma condensada, apenas as mensagens de commit
+
+git log --graph # Exibe o histórico de commits graficamente
+
+git log --decorate # Exibe informações adicionais ao lado dos commits.
+
+git log --graph --decorate --oneline # Tente essa
+```
