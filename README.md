@@ -7,7 +7,7 @@ Nesse texto utilizarei como base as aulas da playlist [Curso gratuito Git e Gith
 
 - [Vídeo-1: O que é GIT?](#video-1)
 - [Vídeo-2: Commits](#video-2)
-- [Vídeo-3: Instalação e configuração do GIT.](#video-2)
+- [Vídeo-3: Instalação e configuração do GIT.](#video-3)
 - [Vídeo-4: Criando Repositórios.](#video-4)
 - [Vídeo-5: Colocando arquivos no stage](#video-5)
 - [Vídeo-6: Fazendo Commits e Logs](#video-6)
