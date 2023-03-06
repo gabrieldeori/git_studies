@@ -178,3 +178,14 @@ git reset h4shcomm1t # Volta ao commit especificado, porém mantém alterações
 
 git reset --hard h4shcomm1t # Volta ao commit especificado descartando alterações não commitadas
 ```
+
+## Vídeo-8: Ignorando arquivos
+Para que o git ignore arquivos você pode simplesmente criar um arquivo de nome .gitignore e populá-lo com o que quiser:
+
+```txt
+.env
+*.txt
+teste.*
+src
+src/img
+```
