@@ -124,6 +124,8 @@ git rm --cached index.html # Retira apenas o arquivo index.html
 git commit # Abre editor padrão para editar a mensagem de commit
 
 git commit -m "mensagem" # Commita direto com a mensagem que está entre aspas.
+
+git commit --m "mensagem" --author="pessoa <pessoa@mail.com>" # Modifica metadados do autor para o especificado
 ```
 
 ###### ⚠️Importante lembrar que o histórico mostrado usa o contexto da branch em que está.
