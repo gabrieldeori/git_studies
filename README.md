@@ -403,6 +403,31 @@ Fork é uma funcionalidade do GitHub que permite:
 
 - Armazenar uma cópia do repositório: O fork permite que um usuário tenha uma cópia completa de um repositório Git em seu próprio perfil do GitHub. Isso é útil para backup ou para acesso fácil a um repositório, mesmo que o repositório original seja excluído ou movido.
 
+## Conteúdos Git não abordados
+### git stash
+Permite salvar temporariamente as alterações em uma branch sem ter que fazer commit, o que pode ser útil quando você precisa mudar de branch rapidamente.
+
+### git cherry-pick
+Permite copiar um ou mais commits específicos de uma branch para outra.
+
+### git bisect
+Ajuda a identificar um commit específico que causou um problema, permitindo que você faça uma busca binária por um commit problemático.
+
+### git submodules
+Permite que você adicione um repositório dentro de outro repositório como um submódulo.
+
+### git hooks
+Permite que você execute scripts personalizados antes ou depois de determinados eventos do git, como um commit ou uma solicitação de pull.
+
+### git reflog
+Mantém um registro de todos os commits e alterações que ocorreram em uma branch, mesmo que eles tenham sido excluídos ou redefinidos.
+
+### git rebase
+Permite reorganizar a história de commits em uma branch, o que pode ser útil para manter uma branch limpa e organizada.
+
+### git squash
+Permite combinar vários commits em um único commit para tornar a história do git mais clara e organizada. Isso pode ser útil, por exemplo, para limpar uma branch antes de criar uma solicitação de pull, combinando vários commits em um único commit mais descritivo e fácil de entender. O comando git squash é usado em conjunto com o comando git rebase -i (interativo), que permite editar e reorganizar os commits em uma branch. Ao usar o git rebase -i, você pode marcar um ou mais commits para squash, o que criará um novo commit que combina as alterações desses commits em um único commit.
+
 ## Conteúdos Github não abordados
 ### Issues
 
