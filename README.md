@@ -74,14 +74,15 @@ Nesse tópico irei apenas referenciar meu repositório de [configuração de amb
 ## Vídeo-4: Criando Repositórios.
 
 ### Comandos básicos:
-- git init: Iniciar repositório
+```sh
+git init # Cria .git/inicia repositório
+```
 
 ## Vídeo-5: Colocando arquivos no stage
 
 ###### ⚠️ Atençaõ: Deve-se entender o contexto do diretório onde os comandos estão sendo executados. Por exemplo se seu repositório for em projeto1 e o seu terminal estiver em projeto1/src, os comandos serão executados dentro do contexto da pasta src, ou seja observando os arquivos e diretórios de src.
 
 ### Comandos para observar:
-- git status
 ```sh
 git status # Mostra o log de stage, ou o que está em stage
 
@@ -91,8 +92,6 @@ git status --short # Mostra uma versão menor do log de stage
 ```
 
 ### Comandos para adicionar:
-
-- git add "Arquivo/diretório/etc"
 ```sh
 git add index.html # Adiciona arquivo index.html
 
@@ -108,9 +107,6 @@ git add . # Adiciona todos os arquivos e diretórios
 ```
 
 ### Comandos para remover:
-- git restore --staged "arquivo/diretório/etc"
-- git rm --cached "arquivo/diretório/etc"
-
 ```sh
 git restore --staged . # Retira todos os diretórios e arquivos da área de stage
 
