@@ -240,13 +240,13 @@ git log # Se fizer um git log perceberá que os commits serão preservados ao re
 
 Existem outras estratégias de merge, como o squash e o rebase, mas deixaremos pra outro momento.
 
-Entre as estratégias de merge mencionadas no vídeo, destaca-se:
+No vídeo é mencionado estratégias de merge automáticas, entre elas destaca-se:
 
-#### Estratégia de merge "Fast-forward":
+#### Estratégia de merge automática "Fast-forward":
 
 Tipo de merge no Git que ocorre quando não há conflitos entre duas branches que estão sendo mescladas. Nesse caso, o Git simplesmente avança a branch atual até a ponta da branch a ser mesclada, incorporando todas as alterações dessa branch sem criar um novo commit de merge.
 
-#### Estratégia de merge "Recursiva":
+#### Estratégia de merge automática "Recursiva":
 
 Forma de realizar um merge no Git que é usada quando há conflitos entre as branches que estão sendo mescladas. Nesse caso, o Git cria um novo commit de merge que combina as alterações de ambas as branches e resolve quaisquer conflitos encontrados. Esse processo é chamado de "merge recursivo" porque o Git pode precisar mesclar commits de merge anteriores para resolver todos os conflitos.
 
