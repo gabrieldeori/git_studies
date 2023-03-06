@@ -304,3 +304,64 @@ git commit # Gerará a mensagem padrão do git. Basta salvar e fechar o editor.
 ```
 
 Dependendo do editor ou ide que você estiver usando é possível resolver conflitos em uma ferramenta.
+
+## Vídeo-12: Iniciando com Github.
+
+Manter um repositório remoto é muito vantajoso, salva o progresso de desenvolvimento em um local mais seguro, já que sua máquina pode dar problema, facilita a visualização de outras pessoas do time, entre outras vantagens já discutidas.
+
+### SSH
+O vídeo cita como configurar o SSH, para não repetir, vou deixar o meu [configuração de ambiente de desenvolvimento](https://github.com/gabrieldeori/cfg_dev_environment/tree/main/first_config) que tem uma parte dedicada a como configurar o ssh.
+
+### Importar código
+Basta importar um código de outro repositório por um botão no frontend do github.
+
+### Repositório Populado
+Você pode criar um repositório no Github e adicionar um README nele e você terá seu repositório populado.
+
+Após isso é só cloná-lo:
+```sh
+git clone git@github.com:organization/repository_name.git # Cria o clone com o nome do projeto
+
+git clone git@github.com:organization/repository_name.git nome_diretorio # Cria o clone do projeto com o nome "nome_diretório"
+```
+
+### Sincronizando repositório existente:
+Basta entrar no diretório do seu projeto e sincronizar da seguinte maneira:
+
+```sh
+git remote add origin git@github.com:organization/repository_name.git # Adiciona a um alias origin o link ssh especificado
+
+git remote -v # Lista os alias definidos
+
+git branch -M main
+
+git push -u origin main
+```
+
+### Criando um repositório novo no PC
+Basta criar no site do github um repositório vazio. (Sem README, Sem LICENÇA). E executar o fluxo abaixo:
+
+```sh
+echo "# repository_name" >> README.md
+
+git init
+
+git add README.md
+
+git commit -m "first commit"
+
+git branch -M main
+
+git remote add origin git@github.com:organization/repository_name.git
+
+git push -u origin main
+```
+
+### Mais sobre o push
+```sh
+git push origin main # Git envie para o alias "origin" o conteúdo da branch "main"
+
+git push -u origin main # Cria um alias para a branch atual para enviar sempre de origin pra main
+
+git push # Após o comando acima, irá fazer push de origin pra main direto
+```
